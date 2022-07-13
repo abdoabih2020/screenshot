@@ -5,7 +5,9 @@ const app = express();
 app.use(express.static(__dirname + '/screenshots'));
 
 const randomstring = require("randomstring");
-
+app.get('/test', (req, res) => {
+  res.send('Hello World!')
+})
 app.get("/", async (request, response) => {
     const random = randomstring.generate({
         length: 7,
