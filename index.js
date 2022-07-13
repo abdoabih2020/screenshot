@@ -54,9 +54,9 @@ app.get("/", async (request, response) => {
     } catch (error) {
         console.log(error);
     }
-});
+});const port = Process.env.PORT || 3000 ;
  // to do  pdf screenshot 
 
-const listener = app.listen(3000, function() {
-    console.log('Your app is listening on port ' + listener.address().port);
+app.listen(port,()=>{  // do not add localhost here if you are deploying it
+    console.log("server listening to port "+port);
 });
